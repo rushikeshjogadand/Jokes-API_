@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+crossorigin="anonymous"></script>
+    <title> 🤣🤔 Jokes 😁🤦‍♂️ </title>
+    <style>
+        section{
+            width: 100%;
+            background-color: rgb(115, 154, 189);
+            height: 100vh;
+            align-items: center;
+        }
+        i{
+            color: orange;
+        }
+        p{
+            font-weight: 800;
+        }
+        main{
+            background-color: #eee;
+            border-radius: 14px;
+            padding:  16px;
+        }
+        #d1{
+            width: 500px;
+            height: fit-content;
+        }
+    </style>
+    <script>
+        function load(){
+            fetch("https://hindi-jokes-api.onrender.com/jokes?api_key=078a738bcb9bf36766b7b1f24088")
+            .then(function(response){
+               return response.json()
+            })
+            .then(function(item){
+                document.getElementById("d1").innerHTML=item.jokeContent;       
+                
+            })
+        }
+    </script>
+
+</head>
+<body >
+    <section class="d-flex justify-content-center">
+        <main class="text-center">
+            <p>😧 हसना मना है 🤣</p>
+            <hr>
+            <div class="h4" id="d1">Hello please click on the below button 👇🏽
+
+
+            </div>
+            <button onclick="load()" class="btn btn-success mt-4">  Get Another Jokes  <i class="bi bi-arrow-right-circle"></i></button>
+        </main>
+    </section>
+</body>
+
+</html>
